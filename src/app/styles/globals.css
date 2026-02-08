@@ -1,0 +1,147 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+[dir="rtl"] p,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .text {
+  text-align: right;
+}
+
+[dir="ltr"] p,
+[dir="ltr"] h1,
+[dir="ltr"] h2,
+[dir="ltr"] h3,
+[dir="ltr"] .text {
+  text-align: left;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="ltr"] .flex {
+  flex-direction: row;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.logo-img {
+  width: 50px;
+  height: auto;
+}
+
+.logo-texts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.slogan-one {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.slogan-two {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.slogan-three {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 30px;
+  background: rgba(193, 194, 194, 0.4);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+
+.nav-arrow {
+  font-size: 14px;
+  transform: rotate(30deg);
+}
+
+
+[dir="rtl"] .nav-arrow {
+  transform: rotate(-30deg);
+}
+ */
