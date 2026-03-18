@@ -1,21 +1,19 @@
 import Hero from './components/Hero';
-// import LatestProjects from '../components/LatestProjects';
+import LatestProjects from './components/LatestProjects';
+import BestSellerProjects from './components/BestSellerProjects';
+import FavouriteProjects from './components/fav-pro';
+import Partners from './components/Partners';
 
-// import About from '../components/About';
 
-// import MapCard from '../components/MapCard';
-// import Achievements from '../components/Achievements';
-// import Partners from '../components/Partners';
-
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <Hero />
-       {/* <LatestProjects /> */}
-      {/* <About />
-      <MapCard />
-      <Achievements />
-      <Partners />  */}
+      <LatestProjects  />
+      <FavouriteProjects />
+      <BestSellerProjects />
+      <Partners />
+
     </>
   );
 }

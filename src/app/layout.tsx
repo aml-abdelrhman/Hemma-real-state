@@ -1,25 +1,29 @@
-// app/[locale]/layout.tsx
-import Navbar from './components/Navbar';
-import Footer from './/components/Footer';
-import { NextIntlClientProvider } from 'next-intl';
-import { messages } from './i18n';
+'use client';
 
-interface LocaleLayoutProps {
+import './styles/globals.css';
+import React, { useState } from 'react';
+import { IntlProvider } from 'react-intl';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'; 
+import enMessages from '../locales/en.json';
+import arMessages from '../locales/ar.json';
+
+interface LayoutProps {
   children: React.ReactNode;
-  params: { locale: 'ar' | 'en' };
 }
 
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const locale = params.locale === 'ar' ? 'ar' : 'en';
+export default function RootLayout({ children }: LayoutProps) {
+  const [currentLocale, setCurrentLocale] = useState<'en' | 'ar'>('ar');
+  const messages = currentLocale === 'ar' ? arMessages : enMessages;
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <html lang={currentLocale} dir={currentLocale === 'ar' ? 'rtl' : 'ltr'}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages[locale]}>
-          <Navbar locale={locale} setLocale={() => {}} />
-          {children}
+        <IntlProvider locale={currentLocale} messages={messages} defaultLocale="en">
+          <Navbar locale={currentLocale} setLocale={setCurrentLocale} />
+          <main>{children}</main>
           <Footer />
-        </NextIntlClientProvider>
+        </IntlProvider>
       </body>
     </html>
   );

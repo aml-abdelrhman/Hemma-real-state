@@ -1,17 +1,86 @@
 // app/data/searchItems.ts
-import { useTranslations } from 'next-intl';
+import { IntlShape } from 'react-intl';
 
-export const getSearchItems = (t: ReturnType<typeof useTranslations>) => [
-  { label: t('nav.works'), href: '/', tags: ['home', 'الرئيسية'] },
-  { label: t('nav.about'), href: '/projects', tags: ['projects', 'مشاريع'] },
-  { label: t('nav.contact'), href: '/off-plan-sales', tags: ['sales', 'بيع'] },
-  { label: t('nav.chairman'), href: '/lands', tags: ['lands', 'أراضي'] },
-  { label: t('nav.board'), href: '/events', tags: ['events', 'فعاليات'] },
-  { label: t('nav.plan'), href: '/methodology', tags: ['plan', 'منهجية'] },
-  { label: t('nav.work'), href: '/careers', tags: ['jobs', 'وظائف'] },
-  { label: t('nav.last'), href: '/developers', tags: ['developers', 'مطورين'] },
+export const getSearchItems = (t: IntlShape) => [
+  { label: t.formatMessage({ id: 'nav.works' }), href: '/', tags: ['home', 'الرئيسية'] },
+  { label: t.formatMessage({ id: 'nav.about' }), href: '/projects', tags: ['projects', 'مشاريع'] },
+  { label: t.formatMessage({ id: 'nav.contact' }), href: '/off-plan-sales', tags: ['sales', 'بيع'] },
+  { label: t.formatMessage({ id: 'nav.chairman' }), href: '/lands', tags: ['lands', 'أراضي'] },
+  { label: t.formatMessage({ id: 'nav.board' }), href: '/events', tags: ['events', 'فعاليات'] },
+  { label: t.formatMessage({ id: 'nav.plan' }), href: '/methodology', tags: ['plan', 'منهجية'] },
+  { label: t.formatMessage({ id: 'nav.work' }), href: '/careers', tags: ['jobs', 'وظائف'] },
+  { label: t.formatMessage({ id: 'nav.last' }), href: '/developers', tags: ['developers', 'مطورين'] },
 
-  // أمثلة إضافية
-  { label: 'Luxury Villa', href: '/projects/villa1', tags: ['luxury', 'فيلا'] },
-  { label: 'Modern Apartment', href: '/projects/apartment1', tags: ['modern', 'شقة'] },
+   {
+    label: 'النفل، شمال الرياض',
+    href: '/projects/project1',
+    tags: [
+      'النفل','شمال','الرياض','لابيرل','الغربي','ثمانية','8','طوابق','برج','تجاري',
+      'محلات','مطاعم','مقاهي','متنوعة','جدة','الشاطئ','1,558','م²','87%','وحدة','مباعة',
+      '2340','ر.س','متاح','23','وحدة'
+    ]
+  },
+  {
+    label: 'جادة النخيل',
+    href: '/projects/project2',
+    tags: [
+      'جادة','النخيل','مجمع','سكني','فاخر','29','وحدة','تصميم','عصري','متكامل','مرافق','حديثة',
+      'الرياض','النخيل','3,686','م²','90%','وحدة','مباعة','1850','ر.س','5','أدوار','محجوز','25','وحدة'
+    ]
+  },
+  {
+    label: 'ملقا نجد 2',
+    href: '/projects/project3',
+    tags: [
+      'ملقا','نجد','2','مجمع','سكني','الماجدية','63','وحدة','واجهات','عصرية','مناطق','خضراء','مشتركة',
+      'الرياض','الملقا','2,000','م²','80%','وحدة','مباعة','2100','ر.س','7','أدوار','متاح','27','وحدة'
+    ]
+  },
+  {
+    label: 'روابي النخيل',
+    href: '/projects/project4',
+    tags: [
+      'روابي','النخيل','مجمع','سكني','حديث','40','وحدة','تصاميم','عصرية','مساحات','خضراء','مشتركة',
+      'الرياض','النخيل','8,500','م²','75%','وحدة','مباعة','1950','ر.س','6','أدوار','متاح','29','وحدة'
+    ]
+  },
+  {
+    label: 'فلل الرياض',
+    href: '/projects/project5',
+    tags: [
+      'فلل','الرياض','مشروع','سكنية','فاخرة','حدائق','خاصة','مرافق','ترفيهية','متعددة',
+      'الرياض','الصحافة','5,200','م²','65%','وحدة','مباعة','3200','ر.س','2','أدوار','متاح','31','وحدة'
+    ]
+  },
+  {
+    label: 'الفيحاء تاور',
+    href: '/projects/project6',
+    tags: [
+      'الفيحاء','تاور','برج','سكني','تجاري','محلات','مكاتب','شقق','فاخرة','جدة','الفيحاء',
+      '500','م²','85%','وحدة','مباعة','2500','ر.س','10','أدوار','متاح','33','وحدة'
+    ]
+  },
+  {
+    label: 'واحة العليا',
+    href: '/projects/project7',
+    tags: [
+      'واحة','العليا','مجمع','سكني','متكامل','ممرات','خضراء','مناطق','لعب','أطفال',
+      'الرياض','العليا','9,300','م²','70%','وحدة','مباعة','1800','ر.س','5','أدوار','محجوز','35','وحدة'
+    ]
+  },
+  {
+    label: 'حدائق النور',
+    href: '/projects/project8',
+    tags: [
+      'حدائق','النور','مشروع','سكني','متنوع','شقق','فلل','مساحات','مختلفة','مرافق','متعددة',
+      'الرياض','النسيم','1,500','م²','80%','وحدة','مباعة','2200','ر.س','7','أدوار','متاح','37','وحدة'
+    ]
+  },
+
+  // فوتر
+  { label: 'سجل اهتمامك', href: '/contact', tags: ['سجل','اهتمامك'] },
+  { label: 'سياسة الخصوصية', href: '/privacy', tags: ['سياسة','الخصوصية'] },
+  { label: 'الشروط والأحكام', href: '/terms', tags: ['الشروط','الأحكام'] },
+  { label: 'موقع الشركة', href: '/', tags: ['موقع','الشركة'] },
 ];
+

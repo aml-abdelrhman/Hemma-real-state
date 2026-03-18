@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useRef } from "react";
 import Image from "next/image";
@@ -11,25 +11,46 @@ import "swiper/css";
 import { projectsData, Project } from "../projects/data";
 import ReusableTextWithArrows from "./ReusableTextWithArrows";
 
-export default function LatestProjects() {
+export default function BestSellerProjects() {
   const swiperRef = useRef<SwiperType | null>(null);
   const intl = useIntl();
   const locale = intl.locale;
 
+ 
+  const topSellingProjects = projectsData
+    .slice()
+    .sort((a, b) => {
+      const aSold = parseInt(
+        intl
+          .formatMessage({
+            id: `projects.${a.slug}.description.typeOne`,
+          })
+          .replace('%', '')
+      );
+      const bSold = parseInt(
+        intl
+          .formatMessage({
+            id: `projects.${b.slug}.description.typeOne`,
+          })
+          .replace('%', '')
+      );
+      return bSold - aSold;
+    })
+    .slice(0, 4);
+
   return (
-    <section dir={locale === "ar" ? "rtl" : "ltr"} className="h-full px-4 md:px-0 mb-[-100px]">
-      {/* عنوان القسم */}
+    <section dir={locale === "ar" ? "rtl" : "ltr"} className="px-4 md:px-0">
       <div className="w-full">
         <ReusableTextWithArrows
-          firstWord={intl.formatMessage({ id: "uxx.first" })}
-          secondWord={intl.formatMessage({ id: "uxx.second" })}
+          firstWord={intl.formatMessage({ id: "bs.first" })}
+          secondWord={intl.formatMessage({ id: "bss.second" })}
+  
           showContent={true}
           onPrev={() => swiperRef.current?.slidePrev()}
           onNext={() => swiperRef.current?.slideNext()}
           className="hidden md:flex"
         />
 
-        {/* Desktop Swiper */}
         <div className="hidden w-full md:block">
           <Swiper
             key={locale}
@@ -46,7 +67,7 @@ export default function LatestProjects() {
               1024: { slidesPerView: 1.9, loop: true },
             }}
           >
-            {projectsData.map((project: Project) => (
+            {topSellingProjects.map((project: Project) => (
               <SwiperSlide key={project.id}>
                 <Link href={`/projects/${project.slug}`} className="block">
                   <div className="overflow-hidden bg-white shadow-md rounded-2xl">
@@ -61,9 +82,7 @@ export default function LatestProjects() {
                         className="object-cover"
                       />
 
-                      {/* معلومات على الصورة */}
                       <div className="absolute flex flex-wrap items-center gap-2 top-2 left-2 right-2">
-                        {/* اسم المشروع مع الأيقونة */}
                         <div className="flex items-center gap-1 bg-white rounded-full px-3 py-2 shadow-sm max-w-[168px] h-[33px] truncate font-medium capitalize text-[#683C21]/40 font-['GE_Dinar_Two'] text-[14px]">
                           <svg
                             className="w-4 h-4 shrink-0"
@@ -93,7 +112,6 @@ export default function LatestProjects() {
                           })}
                         </div>
 
-                        {/* حالة التوفر */}
                         <div className="w-[56px] h-[33px] text-center bg-white rounded-full px-3 py-2 shadow-sm capitalize text-[#683C21]/40 font-['GE_Dinar_Two'] truncate font-medium text-[14px]">
                           {intl.formatMessage({
                             id: `projects.${project.slug}.description.availability`,
@@ -102,9 +120,7 @@ export default function LatestProjects() {
                       </div>
                     </div>
 
-                    {/* أسفل الصورة */}
                     <div className="flex flex-row justify-between gap-2 p-2 ">
-                      {/* شريط البيع */}
                       <div>
                         <span className="block font-semibold text-[#683C21] font-['GE_Dinar_Two'] text-[24px] mb-1">
                           {intl.formatMessage(

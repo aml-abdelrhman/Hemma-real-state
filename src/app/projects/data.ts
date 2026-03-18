@@ -7,6 +7,13 @@ export type Project = {
     lat: number;
     lng: number;
   };
+  units?: {
+    area: string;
+  }[];
+  floorPlans?: {
+    img: string;
+    title: string;
+  }[];
 };
 
 export const projectsData: Project[] = [
@@ -17,7 +24,7 @@ export const projectsData: Project[] = [
     gallery: [
       '/images/carousel2.webp',
       '/images/hero5.png',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/carousel.webp',
       '/images/carousel4.webp',
       '/images/carousel3.webp',
@@ -25,22 +32,34 @@ export const projectsData: Project[] = [
       '/images/hero7.png'
     ],
     map: { lat: 24.7925, lng: 46.7277 },
+    units: [
+      { area: "150" },
+      { area: "200" }
+    ],
+    floorPlans: [
+      { img: "/images/floorplan1.png", title: "Ground Floor" }
+    ]
   },
   {
     id: 2,
     slug: 'project2',
-    hero: '/images/hero1.png',
+    hero: '/images/hero2.png',
     gallery: [
       '/images/hero5.png',
       '/images/carousel5.webp',
       '/images/carousel.webp',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/hero7.png',
       '/images/carousel2.webp',
       '/images/carousel4.webp',
       '/images/carousel3.webp'
     ],
     map: { lat: 21.572972, lng: 46.7300 },
+    units: [
+      { area: "100" },
+      { area: "100" }
+    ],
+    floorPlans: []
   },
   {
     id: 3,
@@ -51,12 +70,17 @@ export const projectsData: Project[] = [
       '/images/carousel2.webp',
       '/images/carousel.webp',
       '/images/hero7.png',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/carousel3.webp',
       '/images/hero5.png',
       '/images/carousel5.webp'
     ],
     map: { lat: 24.7940, lng: 46.7250 },
+    units: [
+      { area: "400" },
+      { area: "300" }
+    ],
+    floorPlans: []
   },
   {
     id: 4,
@@ -68,11 +92,13 @@ export const projectsData: Project[] = [
       '/images/carousel2.webp',
       '/images/carousel4.webp',
       '/images/hero7.png',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/carousel3.webp',
       '/images/carousel.webp'
     ],
     map: { lat: 24.7950, lng: 46.7280 },
+    units: [],
+    floorPlans: []
   },
   {
     id: 5,
@@ -83,12 +109,14 @@ export const projectsData: Project[] = [
       '/images/hero7.png',
       '/images/hero5.png',
       '/images/carousel5.webp',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/carousel2.webp',
       '/images/carousel3.webp',
       '/images/carousel4.webp'
     ],
     map: { lat: 24.7960, lng: 46.7290 },
+    units: [],
+    floorPlans: []
   },
   {
     id: 6,
@@ -99,12 +127,14 @@ export const projectsData: Project[] = [
       '/images/carousel2.webp',
       '/images/carousel5.webp',
       '/images/carousel3.webp',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/carousel.webp',
       '/images/carousel4.webp',
       '/images/hero7.png'
     ],
     map: { lat: 24.7970, lng: 46.7310 },
+    units: [],
+    floorPlans: []
   },
   {
     id: 7,
@@ -116,18 +146,20 @@ export const projectsData: Project[] = [
       '/images/carousel5.webp',
       '/images/hero7.png',
       '/images/carousel4.webp',
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/carousel.webp',
       '/images/hero5.png'
     ],
     map: { lat: 24.7980, lng: 46.7320 },
+    units: [],
+    floorPlans: []
   },
   {
     id: 8,
     slug: 'project8',
     hero: '/images/carousel5.webp',
     gallery: [
-      '/images/hero1.png',
+      '/images/hero2.png',
       '/images/hero7.png',
       '/images/carousel2.webp',
       '/images/carousel4.webp',
@@ -137,5 +169,7 @@ export const projectsData: Project[] = [
       '/images/carousel3.webp'
     ],
     map: { lat: 24.7990, lng: 46.7330 },
+    units: [],
+    floorPlans: []
   },
 ];
