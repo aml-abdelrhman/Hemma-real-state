@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hemma Real Estate | همّة للعقارات 🏠
 
-## Getting Started
+**Hemma Real Estate** هي منصة عقارية فاخرة تم تطويرها لعرض المشاريع المعمارية الفريدة والفرص الاستثمارية المتميزة. يركز المشروع على الفخامة، الشفافية الهندسية، وتقديم تجربة مستخدم استثنائية.
 
-First, run the development server:
+---
+
+## 🚀 المميزات الرئيسية (Key Features)
+
+- **دعم اللغات (i18n):** دعم كامل للغتين العربية (RTL) والإنجليزية (LTR) باستخدام `react-intl`.
+- **عرض المشاريع:** صفحات ديناميكية للمشاريع تشمل معارض صور (Swiper.js)، مخططات الأدوار، والمميزات.
+- **منهجية العمل:** استعراض شفاف لخطوات التطوير من التحليل الاستراتيجي إلى إدارة الأصول.
+- **تصميم عصري:** واجهة مستخدم نخبويّة تم بناؤها باستخدام Tailwind CSS مع تأثيرات حركية بواسطة Framer Motion.
+- **خرائط تفاعلية:** عرض مواقع المشاريع الاستراتيجية بشكل بصري جذاب.
+- **كلمة المؤسس:** قسم خاص يستعرض رؤية القيادة وفلسفة الشركة.
+
+## 🛠️ التقنيات المستخدمة (Tech Stack)
+
+- **الإطار الأساسي:** Next.js (App Router)
+- **التنسيق:** Tailwind CSS
+- **التحريك:** Framer Motion
+- **المكونات التفاعلية:** Swiper.js للمعرض.
+- **اللغة:** TypeScript لضمان جودة الكود.
+- **الترجمة:** React Intl
+
+## 💻 بدء التشغيل (Getting Started)
+
+لشغل المشروع محلياً، اتبع الخطوات التالية:
+
+### 1. التثبيت
+قم بتثبيت المكتبات المطلوبة:
+
+```bash
+npm install
+```
+
+### 2. التشغيل
+ابدأ خادم التطوير:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+افتح http://localhost:3000 في متصفحك لمشاهدة الموقع.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 هيكلة المجلدات (Project Structure)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/projects/[slug]`: الصفحة الديناميكية لتفاصيل المشاريع.
+- `src/app/components`: المكونات الأساسية مثل (ContactUs, Methodology, FoundersSpeech).
+- `src/app/projects/data.ts`: البيانات الأساسية للمشاريع.
+- `public/images`: الأصول البصرية من صور المشاريع والأيقونات.
 
-## Learn More
+## 🌐 النشر (Deployment)
 
-To learn more about Next.js, take a look at the following resources:
+المشروع مهيأ للنشر المباشر على منصة **Vercel**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+تم التطوير بواسطة فريق **همّة للعقارات**.

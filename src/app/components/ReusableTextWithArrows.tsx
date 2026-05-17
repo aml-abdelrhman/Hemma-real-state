@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 
 interface ReusableTextWithArrowsProps {
   firstWord?: string;
@@ -26,6 +25,7 @@ const ReusableTextWithArrows: React.FC<ReusableTextWithArrowsProps> = ({
   showArrows = true,
   showBackground = true,
   showIcon = true,
+  className = "",
   onPrev,
   onNext,
 }) => {
@@ -33,7 +33,7 @@ const ReusableTextWithArrows: React.FC<ReusableTextWithArrowsProps> = ({
   const [rightHover, setRightHover] = useState(false);
 
   return (
-    <div className="w-full h-[300px] lg:h-[200px] flex justify-center items-center relative">
+    <div className={`w-full h-[300px] lg:h-[200px] flex justify-center items-center relative ${className}`}>
       <div className="relative mx-auto max-w-[1311px] w-full flex flex-col md:flex-row items-center justify-between gap-8 z-10 px-5 py-3 h-full">
         {/* النص + أيقونة مع الخلفية */}
         {showContent && (
@@ -58,14 +58,22 @@ const ReusableTextWithArrows: React.FC<ReusableTextWithArrowsProps> = ({
               />
             )}
             {showIcon && (
-              <Image
-                src="/images/H-icon.png"
-                alt="Icon"
-                width={60}
-                height={60}
+              <div 
+                className="w-[60px] h-[60px]"
+                style={{
+                  backgroundColor: firstColor,
+                  maskImage: 'url(/images/logo-only.svg)',
+                  WebkitMaskImage: 'url(/images/logo-only.svg)',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskPosition: 'center',
+                  maskSize: 'contain',
+                  WebkitMaskSize: 'contain'
+                }}
               />
             )}{" "}
-            <div className="flex font-['GE Dinar Two'] text-[32px] md:text-[35px] font-light gap-1">
+            <div className="flex text-[32px] md:text-[35px] font-light gap-1">
               <span style={{ color: firstColor }}>{firstWord}</span>
               <span style={{ color: secondColor }}>{secondWord}</span>
             </div>

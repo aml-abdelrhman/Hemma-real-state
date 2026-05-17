@@ -3,8 +3,6 @@ import { IntlShape } from 'react-intl';
 
 export const getSearchItems = (t: IntlShape) => [
   { label: t.formatMessage({ id: 'nav.works' }), href: '/', tags: ['home', 'الرئيسية'] },
-  { label: t.formatMessage({ id: 'nav.about' }), href: '/projects', tags: ['projects', 'مشاريع'] },
-  { label: t.formatMessage({ id: 'nav.contact' }), href: '/off-plan-sales', tags: ['sales', 'بيع'] },
   { label: t.formatMessage({ id: 'nav.chairman' }), href: '/lands', tags: ['lands', 'أراضي'] },
   { label: t.formatMessage({ id: 'nav.board' }), href: '/events', tags: ['events', 'فعاليات'] },
   { label: t.formatMessage({ id: 'nav.plan' }), href: '/methodology', tags: ['plan', 'منهجية'] },
@@ -83,4 +81,3 @@ export const getSearchItems = (t: IntlShape) => [
   { label: 'الشروط والأحكام', href: '/terms', tags: ['الشروط','الأحكام'] },
   { label: 'موقع الشركة', href: '/', tags: ['موقع','الشركة'] },
 ];
-

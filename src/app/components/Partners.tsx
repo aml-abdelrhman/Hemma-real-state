@@ -27,34 +27,35 @@ const Partners: React.FC = () => {
   return (
     <section 
       dir={isRtl ? "rtl" : "ltr"} 
-      className="partners-section py-20 bg-white overflow-hidden"
+      className="pt-16 pb-8 mt-12 overflow-hidden bg-white partners-section"
     >
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         
         {/* الجزء العلوي: العنوان مع الأسهم */}
-        <div className="mb-12">
+        <div className="mb-4">
           <ReusableTextWithArrows
             firstWord={intl.formatMessage({ id: "mixx.first" })}
             secondWord={intl.formatMessage({ id: "mixx.second" })}
             showContent={true}
             onPrev={() => swiperRef.current?.slidePrev()}
             onNext={() => swiperRef.current?.slideNext()}
+            className="!h-[120px] lg:!h-[100px]"
           />
           
-          <p className="mt-4 text-gray-500 max-w-2xl leading-relaxed text-sm md:text-base opacity-80">
+          <p className="max-w-2xl mt-1 text-xs leading-relaxed text-gray-500 md:text-sm opacity-80">
             {intl.formatMessage({ id: "partners.description" })}
           </p>
         </div>
 
-        <div className="partners-swiper-wrapper relative">
+        <div className="relative partners-swiper-wrapper">
           <Swiper
             key={locale}
             modules={[Autoplay]}
             autoplay={{
-              delay: 2500, 
+              delay: 0,
               disableOnInteraction: false, 
             }}
-            speed={800}
+            speed={4000}
             slidesPerView={2}
             spaceBetween={20}
             loop={true} 
@@ -63,11 +64,11 @@ const Partners: React.FC = () => {
               640: { slidesPerView: 3, spaceBetween: 30 },
               1024: { slidesPerView: 5, spaceBetween: 50 },
             }}
-            className="partners-swiper !py-10" // إضافة padding لإظهار تأثير الـ Hover
+            className="partners-swiper !py-6 transition-linear"
           >
-            {logos.map((logo, index) => (
+            {[...logos, ...logos].map((logo, index) => (
               <SwiperSlide key={index}>
-                <div className="flex items-center justify-center p-6 h-32 transition-all duration-500 hover:scale-110 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 bg-gray-50 rounded-2xl border border-transparent hover:border-[#C9AA7B]/20">
+                <div className="flex items-center justify-center h-24 p-4 transition-all duration-500 bg-white border shadow-sm hover:scale-105 rounded-xl border-gray-50">
                   <Image 
                     src={logo} 
                     alt={`Partner ${index + 1}`} 

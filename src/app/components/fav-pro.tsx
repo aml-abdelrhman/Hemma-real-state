@@ -14,7 +14,7 @@ const FavouriteProjects = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="bg-[#EADEC6] lg:py-16">
+    <div className="bg-[#EADEC6] pt-12 pb-12 lg:pt-48 lg:pb-24">
       <div className="w-full max-w-[1500px] h-full lg:h-[650px] mx-auto px-4 md:px-16">
         <Swiper
           spaceBetween={40}
@@ -22,7 +22,7 @@ const FavouriteProjects = () => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           <SwiperSlide>
-            <div className="flex flex-col gap-10 lg:flex-row lg:items-start relative top-[-70px]">
+            <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
 
               <div className="flex flex-col flex-1 gap-6">
                 <div className="flex items-center justify-between w-full">
@@ -57,7 +57,7 @@ const FavouriteProjects = () => {
 
                 <div className="flex flex-col justify-between gap-6 md:flex-row md:gap-10">
                   <div className="flex flex-col w-full gap-4 md:w-1/2">
-                    <div className="relative w-full h-[371px] md:w-[270px] md:h-[311px] rounded-xl overflow-hidden mt-[-70px] lg:mt-0">
+                    <div className="relative w-full h-[250px] md:w-[270px] md:h-[311px] rounded-xl overflow-hidden mt-0">
                       <Image
                         src="/images/fav1.png"
                         alt="Small Image"
@@ -109,7 +109,7 @@ const FavouriteProjects = () => {
               </div>
 
               <div className="flex justify-center flex-1 mt-6 md:justify-end lg:block lg:mt-0">
-                <div className="relative w-full h-[300px] lg:h-[700px] rounded-xl overflow-hidden">
+                    <div className="relative w-full h-[250px] lg:h-[700px] rounded-xl overflow-hidden">
                   <Image
                     src="/images/fav2.png"
                     alt="Large Image"
@@ -150,7 +150,7 @@ const FavouriteProjects = () => {
                 <div className="flex flex-col justify-between gap-6 md:flex-row md:gap-10">
                   {/* الصورة الصغيرة + نص */}
                   <div className="flex flex-col w-full gap-4 md:w-1/2">
-                    <div className="relative w-full h-[311px] md:w-[270px] md:h-[311px] rounded-xl overflow-hidden">
+                        <div className="relative w-full h-[250px] md:w-[270px] md:h-[311px] rounded-xl overflow-hidden">
                       <Image
                         src="/images/fav2.png"
                         alt="Small Image"
@@ -203,7 +203,7 @@ const FavouriteProjects = () => {
 
               {/* العمود الثاني - الصورة الكبيرة */}
               <div className="flex justify-center flex-1 mt-6 md:justify-end lg:block lg:mt-0">
-                <div className="relative w-full h-[600px] rounded-xl overflow-hidden">
+                    <div className="relative w-full h-[250px] lg:h-[600px] rounded-xl overflow-hidden">
                   <Image
                     src="/images/fav1.png"
                     alt="Large Image"

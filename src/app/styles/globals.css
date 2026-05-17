@@ -10,6 +10,10 @@
   .text-label { @apply text-[12.5px] sm:text-[24px]; }
   .text-type { @apply text-[8.5px] sm:text-[14px]; }
   .text-unit { @apply text-[7.5px] sm:text-[14px]; }
+
+  .font-dhibyani {
+    font-family: var(--font-dhibyani), sans-serif;
+  }
 }
 
 /* 

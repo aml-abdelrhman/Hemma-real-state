@@ -16,6 +16,12 @@ export default function BestSellerProjects() {
   const intl = useIntl();
   const locale = intl.locale;
 
+  const staticImages = [
+    "https://plus.unsplash.com/premium_photo-1661954372617-15780178eb2e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwaG9tZXN8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bHV4dXJ5JTIwaG9tZXN8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1706808849803-f61304e024ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D",
+    "https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
+  ];
  
   const topSellingProjects = projectsData
     .slice()
@@ -67,23 +73,23 @@ export default function BestSellerProjects() {
               1024: { slidesPerView: 1.9, loop: true },
             }}
           >
-            {topSellingProjects.map((project: Project) => (
+            {topSellingProjects.map((project: Project, idx: number) => (
               <SwiperSlide key={project.id}>
                 <Link href={`/projects/${project.slug}`} className="block">
-                  <div className="overflow-hidden bg-white shadow-md rounded-2xl">
+                  <div className="overflow-hidden transition-all duration-500 bg-white border border-gray-100 shadow-sm group hover:shadow-xl rounded-3xl">
                     {/* الصورة الرئيسية */}
-                    <div className="relative w-full h-96">
+                    <div className="relative w-full overflow-hidden h-96">
                       <Image
-                        src={project.hero}
+                        src={staticImages[idx % staticImages.length]}
                         alt={intl.formatMessage({
                           id: `projects.${project.slug}.title`,
                         })}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
 
-                      <div className="absolute flex flex-wrap items-center gap-2 top-2 left-2 right-2">
-                        <div className="flex items-center gap-1 bg-white rounded-full px-3 py-2 shadow-sm max-w-[168px] h-[33px] truncate font-medium capitalize text-[#683C21]/40 font-['GE_Dinar_Two'] text-[14px]">
+                      <div className="absolute flex flex-wrap items-center gap-2 top-4 left-4 right-4">
+                        <div className="flex items-center gap-1 bg-white/90 backdrop-blur-md rounded-full px-4 py-2 shadow-sm max-w-[180px] h-[36px] truncate font-semibold capitalize text-[#683C21] font-['GE_Dinar_Two'] text-[13px]">
                           <svg
                             className="w-4 h-4 shrink-0"
                             viewBox="0 0 16 16"
@@ -106,13 +112,13 @@ export default function BestSellerProjects() {
                         </div>
 
                         {/* عدد الأدوار */}
-                        <div className="w-[77px] h-[33px] text-center bg-white rounded-full px-4 py-2 shadow-sm capitalize text-[#683C21]/40 font-['GE_Dinar_Two'] truncate font-medium text-[14px]">
+                        <div className="w-[85px] h-[36px] flex items-center justify-center bg-white/90 backdrop-blur-md rounded-full px-4 py-2 shadow-sm capitalize text-[#683C21] font-['GE_Dinar_Two'] truncate font-medium text-[13px]">
                           {intl.formatMessage({
                             id: `projects.${project.slug}.description.floors`,
                           })}
                         </div>
 
-                        <div className="w-[56px] h-[33px] text-center bg-white rounded-full px-3 py-2 shadow-sm capitalize text-[#683C21]/40 font-['GE_Dinar_Two'] truncate font-medium text-[14px]">
+                        <div className="w-[65px] h-[36px] flex items-center justify-center bg-[#C9AA7B] text-white rounded-full px-3 py-2 shadow-sm capitalize font-['GE_Dinar_Two'] truncate font-bold text-[12px]">
                           {intl.formatMessage({
                             id: `projects.${project.slug}.description.availability`,
                           })}
@@ -120,9 +126,9 @@ export default function BestSellerProjects() {
                       </div>
                     </div>
 
-                    <div className="flex flex-row justify-between gap-2 p-2 ">
+                    <div className="flex flex-col justify-between gap-4 p-6 md:flex-row">
                       <div>
-                        <span className="block font-semibold text-[#683C21] font-['GE_Dinar_Two'] text-[24px] mb-1">
+                        <span className="block font-bold text-[#683C21] font-['GE_Dinar_Two'] text-[22px] mb-3 group-hover:text-[#C9AA7B] transition-colors">
                           {intl.formatMessage(
                             { id: "projects.floorsLabel" },
                             {
@@ -148,7 +154,7 @@ export default function BestSellerProjects() {
                             </span>
                           </div>
 
-                          <div className="w-32 h-2 bg-[#EADEC6] rounded overflow-hidden">
+                          <div className="w-40 h-1.5 bg-[#F3F4F6] rounded-full overflow-hidden mt-1">
                             <div
                               className="h-full bg-[#C9AA7B]"
                               style={{
@@ -164,7 +170,7 @@ export default function BestSellerProjects() {
                       </div>
 
                       {/* نوع الوحدة - المساحة - السعر */}
-                      <div className="flex flex-col justify-between items-center px-8 text-[#683C21]/40 text-[14px] mt-1 ">
+                      <div className="flex flex-col justify-between items-end md:items-center text-[#683C21]/60 text-[14px]">
                         <div className="flex flex-row items-center gap-1 text-[14px]">
                           <svg
                             width="16"
@@ -199,16 +205,16 @@ export default function BestSellerProjects() {
                             id: `projects.${project.slug}.description.area`,
                           })}
                         </div>
-                        <div>
+                        <div className="mt-2">
                           {/* السعر */}
-                          <span className="text-[#683C21] text-[14px]">
+                          <span className="text-[#683C21] font-bold text-[18px]">
                             {intl.formatMessage({
                               id: `projects.${project.slug}.description.price`,
                             })}
                           </span>
 
                           {/* العملة */}
-                          <span className="text-[#C9AA7B] ml-1">
+                          <span className="text-[#C9AA7B] ml-1 font-medium">
                             {intl.formatMessage({
                               id: `projects.${project.slug}.description.currency`,
                             })}
@@ -226,7 +232,7 @@ export default function BestSellerProjects() {
 
       {/* Mobile View - 3 Projects Vertical */}
       <div className="flex flex-col gap-4 md:hidden">
-        {projectsData.slice(0, 3).map((project: Project) => (
+        {projectsData.slice(0, 3).map((project: Project, idx: number) => (
           <Link
             key={project.id}
             href={`/projects/${project.slug}`}
@@ -236,7 +242,7 @@ export default function BestSellerProjects() {
               {/* الصورة */}
               <div className="relative w-full h-64 sm:h-80">
                 <Image
-                  src={project.hero}
+                  src={staticImages[idx % staticImages.length]}
                   alt={intl.formatMessage({
                     id: `projects.${project.slug}.title`,
                   })}

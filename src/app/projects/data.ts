@@ -37,13 +37,13 @@ export const projectsData: Project[] = [
       { area: "200" }
     ],
     floorPlans: [
-      { img: "/images/floorplan1.png", title: "Ground Floor" }
+      { img: "/images/piic.jpeg", title: "Ground Floor" }
     ]
   },
   {
     id: 2,
     slug: 'project2',
-    hero: '/images/hero2.png',
+    hero: '/images/first1.png',
     gallery: [
       '/images/hero5.png',
       '/images/carousel5.webp',
@@ -59,7 +59,7 @@ export const projectsData: Project[] = [
       { area: "100" },
       { area: "100" }
     ],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
   {
     id: 3,
@@ -80,7 +80,7 @@ export const projectsData: Project[] = [
       { area: "400" },
       { area: "300" }
     ],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
   {
     id: 4,
@@ -98,7 +98,7 @@ export const projectsData: Project[] = [
     ],
     map: { lat: 24.7950, lng: 46.7280 },
     units: [],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
   {
     id: 5,
@@ -116,7 +116,7 @@ export const projectsData: Project[] = [
     ],
     map: { lat: 24.7960, lng: 46.7290 },
     units: [],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
   {
     id: 6,
@@ -134,7 +134,7 @@ export const projectsData: Project[] = [
     ],
     map: { lat: 24.7970, lng: 46.7310 },
     units: [],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
   {
     id: 7,
@@ -152,7 +152,7 @@ export const projectsData: Project[] = [
     ],
     map: { lat: 24.7980, lng: 46.7320 },
     units: [],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
   {
     id: 8,
@@ -170,6 +170,6 @@ export const projectsData: Project[] = [
     ],
     map: { lat: 24.7990, lng: 46.7330 },
     units: [],
-    floorPlans: []
+    floorPlans: [{ img: "/images/pic.jpeg", title: "Main Floor" }]
   },
 ];

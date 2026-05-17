@@ -1,15 +1,42 @@
 {
+  "hero.slide1.tag": "Elite Real Estate Development",
+  "hero.slide1.title1": "The Art of",
+  "hero.slide1.title2": "Luxury Living",
+  "hero.slide1.description": "Crafting architectural landmarks that blend absolute luxury with sustainable investment security.",
+  "hero.slide2.tag": "Avant-Garde Design",
+  "hero.slide2.title1": "Architectural",
+  "hero.slide2.title2": "Masterpieces",
+  "hero.slide2.description": "Innovating spaces that surpass expectations, where creativity meets the finest details of prestige.",
+  "hero.slide3.tag": "Sovereign Investment",
+  "hero.slide3.title1": "Generational",
+  "hero.slide3.title2": "Wealth",
+  "hero.slide3.description": "We don't just build walls; we craft real estate assets that secure generational prosperity with absolute safety.",
+  "hero.cta.projects": "View Projects",
+  "hero.cta.contact": "Contact Us",
   "nav.works": "Home",
-  "nav.about": "Projects",
-  "nav.contact": "Off-plan Sales",
+  "nav.projects": " Our Projects",
+  "nav.off-plan-sales": "Off-plan Sales",
   "nav.chairman": "Lands",
   "nav.board": "Events",
   "nav.plan": "Developers",
   "nav.work": "Hemma Work Methodology",
-  "nav.last": "Careers",
+  "nav.about": "About us",
+  "founders.tagline": "Executive Leadership",
+  "founders.title": "Message from the Founder & Chairman",
+  "founders.imageAlt": "Founder of Hemma Real Estate",
+  "founders.name": "Eng. Abdulrahman Al-Ali",
+  "founders.position": "Founder & Chairman",
+  "founders.quote": "\"We do not merely build spatial dimensions; we engineer structural environments where generations thrive.\"",
+  "founders.paragraph1": "From the inception of Hemma Real Estate, our overarching objective has been to redefine the architectural landscape. We operate on a foundational doctrine that ultra-luxury structures are not merely static coordinates, but fluid ecosystems designed to cultivate wealth and baseline prestigious living.",
+  "founders.paragraph2": "We have institutionalized a definitive regulatory build-protocol across our ecosystem, centered on uncompromised asset clarity, rigid structural parameters, and world-class Tier 1 sourcing. This profound execution metric has solidified our sovereign reputation among stakeholders.",
+  "founders.paragraph3": "We orchestrate our path forward with resolute vision, constantly pioneering sustainable built-environments that ensure compounding intergenerational value. Welcome to the continuous legacy of Hemma.",
+  "founders.cta": "Request Private Advisory",
 
   "footer.descriptionLine1": "Hemma Real Estate excels in modern real estate marketing, supported by a wide client database",
   "footer.descriptionLine2": "and a team of experts dedicated to promoting projects effectively and meeting clients’ needs.",
+  "footer.image1Alt": "Footer background image",
+  "footer.image2Alt": "Footer decorative element",
+  "footer.logoAlt": "Hemma Real Estate Logo",
   "footer.cta": "Register your interest",
   "footer.rights": "All rights reserved © 2018 - 2026",
   "footer.serviceNumber": "Service number: 920014659",
@@ -179,13 +206,7 @@
   "projects.project2.description.floors": "10 Floors",
   "projects.project2.description.location": "Al Malqa, Riyadh",
   "project.unitTypeVal": "Apartment / Villa",
-  "project.statusVal": "Available"
+  "project.statusVal": "Available",
+  "project.sqmVal": "Various Sizes"
 
 }
-
-
-
-
-
-
-

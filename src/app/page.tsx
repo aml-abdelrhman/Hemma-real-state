@@ -1,4 +1,5 @@
 import Hero from './components/Hero';
+import MethodologyPage from './components/MethodologyPage';
 import LatestProjects from './components/LatestProjects';
 import BestSellerProjects from './components/BestSellerProjects';
 import FavouriteProjects from './components/fav-pro';
@@ -9,6 +10,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+            <MethodologyPage />
+
       <LatestProjects  />
       <FavouriteProjects />
       <BestSellerProjects />
