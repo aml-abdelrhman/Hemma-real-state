@@ -5,13 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useIntl } from 'react-intl';
 
-interface FoundersPageProps {
-  locale?: 'ar' | 'en';
-}
-
-const FoundersSpeechPage: React.FC<FoundersPageProps> = ({ locale = 'ar' }) => {
+const FoundersSpeechPage = () => {
   const intl = useIntl();
-  const isRtl = locale === 'ar';
+  const isRtl = intl.locale === 'ar';
 
   return (
     <div className="w-full bg-[#F8F9FA] text-[#1E293B] min-h-screen pt-28 md:pt-40 pb-24 overflow-hidden relative font-sans">

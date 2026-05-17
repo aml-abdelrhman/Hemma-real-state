@@ -115,11 +115,11 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
 
   const navLinks = [
     { key: "works", href: "/" },
-    { key: "about", href: "/components/founders-speech" },
+    { key: "about", href: "/founders-speech" },
 
-    { key: "projects", href: "/LatestProjects" },
-    { key: "plan", href: "/components/Partners" },
-    { key: "off-plan-sales", href: "/projects/project1" },
+    { key: "projects", href: "/latest-projects" },
+    { key: "plan", href: "/partners" },
+    { key: "off-plan-sales", href: "/off-plan-sales" },
   ];
 
   const switchLanguage = () => setLocale(locale === "ar" ? "en" : "ar");
@@ -205,7 +205,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
             </button>
 
             <Link
-              href="/components/ContactUs"
+              href="/contact-us"
               className={`px-5 py-2.5 text-[14px] font-bold rounded-xl transition-all shadow-sm ${scrolled ? "bg-[#1E3A8A] text-white hover:bg-[#1E3A8A]/90" : "bg-white text-gray-900 hover:bg-white/90"}`}
             >
               {locale === "ar" ? "تواصل معنا" : "Contact Us"}
@@ -292,7 +292,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
           </button>
 
           <Link
-            href="/components/ContactUs"
+            href="/contact-us"
             onClick={() => setOpen(false)}
             className="w-full text-center py-3 bg-[#1E3A8A] text-white font-bold rounded-xl shadow-sm hover:bg-[#1E3A8A]/90 transition"
           >
